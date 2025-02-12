@@ -5,9 +5,9 @@ body {
     padding: 0;
     background-color: #fafafa;
     color: #2F4156;
+    background-image: url(../img/CYANOTYPE\ ORIGINAL\ PRINT\ _\ HYDRANGEA\ 01\ \(5x7_\).jpeg);
+    background-attachment: fixed;
 }
-
-
 header {
     background-color: white;
     color: #567C8D;
@@ -16,12 +16,11 @@ header {
 }
 
 .logo img {
-    width: 250px;
+    width: 500px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
 
 .navbar nav ul {
     list-style: none;
@@ -48,16 +47,47 @@ header {
 
 
 section {
-    padding: 50px;
-    margin: 20px;
     background-color: #567C8D;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
-#démarcheArtistique {
-    background-color: #e0f7fa;
+.demarche {
+    
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+}
+
+.demarche h2{
+    text-align: center;
+}
+.demarche p {
+    color: #FCC201;
+    text-align: center;
+}
+.procede {
+    background-color: rgba(0, 0, 0, 0); 
+}
+.procede h2 {
+    text-align: center;
+    color: white;
+}
+.procede p {
+    color: #FCC201;
+    text-align: center;
+}
+
+.astuce {
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+}
+.astuce h2{
+    text-align: center;
+}
+.astuce p {
+    color: #FCC201;
+    text-align: center;
 }
 
 .galerie {
