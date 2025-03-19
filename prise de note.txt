@@ -1,0 +1,4 @@
+Style - regular
+Fonte - grotesk
+Fonte - century
+Fonte - calibri

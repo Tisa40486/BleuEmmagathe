@@ -1,28 +1,45 @@
 
 body {
-    font-family: Arial, sans-serif;
+    
     margin: 0;
-    padding: 0;
-    background-color: #fafafa;
     color: #2F4156;
-    background-image: url(../img/CYANOTYPE\ ORIGINAL\ PRINT\ _\ HYDRANGEA\ 01\ \(5x7_\).jpeg);
+    background-image: url("../img/Tulip.jpg");
+    background-size: cover;
     background-attachment: fixed;
+    font-family: Arial nova light, sans-serif;
+}
+.background {
+    height: max-content;
+    width: auto;
 }
 header {
-    background-color: white;
-    color: #567C8D;
-    padding: 20px;
+    background-color: #FFF;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
-
 .logo img {
-    width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: auto;
+    height: 250px;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    text-align: left;
+}
+.logo h1 {
+    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+    font-size: 50px;
+    color: #2F4156;
+    padding: 10px;
+    text-align: center;
+}
+.navbar {
+    background-color: #2F4156;
+    padding: 10px;
+    
 }
 
-.navbar nav ul {
+.navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -30,153 +47,327 @@ header {
     justify-content: center;
 }
 
-.navbar nav ul li {
-    margin: 0 15px;
+.navbar ul li {
+    position: relative;
 }
 
-.navbar nav ul li a {
-    color: #567C8D;
+.navbar ul li a {
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    color: white;
+    padding: 10px 15px;
+    display: block;
 }
 
-.navbar nav ul li a:hover {
+.navbar ul li a:hover {
+    background-color: #1e2a38;
+}
+
+/* menu deroulant */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2F4156;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.dropdown-content li {
+    width: 100%;
+}
+.dropdown-content li a {
     color: #2F4156;
+    padding: 10px;
+    display: block;
+}
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content,
+.dropdown-content.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 
 
-section {
-    background-color: #567C8D;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 
-.demarche {
-    
-    background-color: rgba(0, 0, 0, 0); 
-    color: white;
-}
-
-.demarche h2{
-    text-align: center;
-}
-.demarche p {
-    color: #FCC201;
-    text-align: center;
-}
-.procede {
-    background-color: rgba(0, 0, 0, 0); 
-}
-.procede h2 {
-    text-align: center;
-    color: white;
-}
-.procede p {
-    color: #FCC201;
-    text-align: center;
-}
-
-.astuce {
-    background-color: rgba(0, 0, 0, 0); 
-    color: white;
-}
-.astuce h2{
-    text-align: center;
-}
-.astuce p {
-    color: #FCC201;
-    text-align: center;
-}
-
-.galerie {
-    background-color: #fafafa;
-}
-
-.galerie h2 {
-    text-align: center;
-    font-size: 2em;
-}
-
-
-.images {
+/* Cyanotype*/
+.Cyanotype{
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2F4156;
+    border-radius: 10px;
 }
-
-.image-item {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-
-footer {
-    background-color: #003366;
-    color: white;
-    padding: 15px;
-   
-}
-
-
-.footerInformations {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.InformationPratique, .Contact {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-    width: 40%;
-    text-align: left;
-}
-
-.InformationPratique h1,
-.Contact h1 {
-    font-size: 25px;
+.Cyanotype h2{
+    font-size: 30px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
     text-decoration: underline;
 }
-
-.InformationPratique a,
-.Contact a {
-    color: white;
-    text-decoration: none;
+.Cyanotype h3{
+    font-size: 20px;
+    color: #EDAB18;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+.Cyanotype p{
     font-size: 15px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
 }
 
-.InformationPratique a:hover,
-.Contact a:hover {
+.PieceUnique{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.PieceUnique h2{
+    font-size: 30px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}  
+
+/* carousel image Piece Unique*/
+.carousel-container {
+    position: relative;
+    width: 100%; 
+    height: auto;
+    max-width: 400px; 
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+.carousel img {
+    width: 100%;
+    height: auto;
+    flex: 0 0 100%;
+    border-radius: 10px;
+}
+/* Boutons de navigation */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Réduction de la taille des boutons */
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+button.prev {
+    left: 5px;
+}
+button.next {
+    right: 5px;
+} 
+.Video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2F4156;
+    border-radius: 10px;
+}
+.Video h2{
+    font-size: 30px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+/* footer */
+footer{
+    background-color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+.logoFooter img{
+    width: auto;
+    height: 175px;
+}
+.footerInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    padding: 10px;
+    justify-content: center;
+}
+.contact h3{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact ul li {
+    display: flex;
+    align-items: center; 
+
+}
+
+.contact ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+
+.socialMedia-logo {
+    width: 24px; 
+    height: 24px;
+}
+
+.info h3{
+    text-align: center;
+    color: #000;
+    text-decoration: underline;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.info ul li{
+    display: flex;
+    align-items: center;
+}
+.info ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.QSJ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2F4156;
+    border-radius: 10px;
+}
+.QSJ img{
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+}
+.QSJ p{
+    font-size: 22px;
+    color: #FFF;
+    text-align: justify;
+    line-height: 2.1;
+    word-spacing: 2px;
+    text-indent: 30px;
+}
+blockquote{
+    font-style: italic;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+    color: #FFF;
+    margin: 20px 0;
+    font-size: 35px;
+    text-align: center;
+    
+}
+
+.TitleMain{
+    color: #FFF;
+    font-size: 40px;
+    text-align: center;
     text-decoration: underline;
 }
 
 
-.logoFooter {
+.RecettePImg{
+    background-color: #2F4156;
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
-    height: 165px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
-
-
-.Contact ul li {
-    margin-bottom: 10px;
+.RecetteH1{
+    font-size: 30px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+    background-color: #2F4156;
 }
-
-
-.facebook-logo {
-    width: 30px;
+.RecettePImg img{
+    width: 50%;
     height: auto;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
 }
 
-.facebook-logo:hover {
-    transform: scale(1.2);
-}
-.Contact{
-    width: 30%;
+.RecettePImg p{
+    font-size: 20px;
+    color: #FFF;
+    text-align: justify;
+    line-height: 2.1;
+    word-spacing: 2px;
+    text-indent: 30px;
 }
