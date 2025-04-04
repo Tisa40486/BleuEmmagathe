@@ -2,7 +2,7 @@
 body {
     
     margin: 0;
-    color: #2F4156;
+    color: #2e2b59;
     background-image: url("../img/Tulip.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -18,23 +18,43 @@ header {
     padding: 10px 0;
     text-align: center;
 }
-.logo img {
-    width: auto;
-    height: 250px;
+.logo {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     padding: 10px;
-    text-align: left;
+    margin: 10px;
+    border-radius: 10px;
 }
-.logo h1 {
+.logo img, h1 {
+    color: #2F4156;
     font-family: Verdana, Tahoma, sans-serif, sans-serif;
-    font-size: 50px;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.logo h2 {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+    font-size: 30px;
     color: #2F4156;
     padding: 10px;
-    text-align: center;
+   
+    
 }
 .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #2F4156;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #0b4aa8;
     padding: 10px;
     
 }
@@ -49,6 +69,13 @@ header {
 
 .navbar ul li {
     position: relative;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
 
 .navbar ul li a {
@@ -59,21 +86,25 @@ header {
 }
 
 .navbar ul li a:hover {
-    background-color: #1e2a38;
+    border-radius: 10px;
+    text-decoration: overline underline;
 }
 
 /* menu deroulant */
 .dropdown-content {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2F4156;
+    background-color: #0b4aa8;
     min-width: 150px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
-
     opacity: 0;
     transform: translateY(-10px);
     visibility: hidden;
@@ -83,18 +114,21 @@ header {
     width: 100%;
 }
 .dropdown-content li a {
-    color: #2F4156;
+    color: #2e2b59;
     padding: 10px;
     display: block;
 }
 .dropdown-content li a:hover {
-    background-color: #f1f1f1;
+    background-color: #2F4156;
+    color: white;
+    text-decoration: none;
 }
 .dropdown:hover .dropdown-content,
 .dropdown-content.show {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+    z-index: 999;
 }
 
 
@@ -108,28 +142,38 @@ header {
     flex-direction: column;
     padding: 10px;
     margin: 10px;
-    background-color: #2F4156;
+    background-color: #0b4aa8;
     border-radius: 10px;
+    
 }
 .Cyanotype h2{
-    font-size: 30px;
+    font-size: 80px;
     color: #FFF;
     text-align: center;
-    padding: 10px;
-    text-decoration: underline;
+    padding: 5px;
+    text-decoration: none;
 }
 .Cyanotype h3{
-    font-size: 20px;
-    color: #EDAB18;
+    font-size: 50px;
+    color: #FFF;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     text-decoration: underline;
 }
 .Cyanotype p{
-    font-size: 15px;
+    font-size: 25px;
     color: #FFF;
     text-align: center;
     padding: 10px;
+}
+.Cyanotype a{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2F4156;
+    font-size: 30px;
 }
 
 .PieceUnique{
@@ -143,7 +187,7 @@ header {
     border-radius: 10px;
 }
 .PieceUnique h2{
-    font-size: 30px;
+    font-size: 50px;
     color: #FFF;
     text-align: center;
     padding: 10px;
@@ -181,8 +225,8 @@ button.prev, button.next {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 5px 10px; /* Réduction de la taille des boutons */
-    font-size: 18px;
+    padding: 5px 10px; 
+    font-size: 35px;
     cursor: pointer;
     border-radius: 50%;
     transition: background 0.3s;
@@ -203,7 +247,7 @@ button.next {
     flex-direction: column;
     padding: 10px;
     margin: 10px;
-    background-color: #2F4156;
+    background-color: transparent;
     border-radius: 10px;
 }
 .Video h2{
@@ -213,6 +257,7 @@ button.next {
     padding: 10px;
     text-decoration: underline;
 }
+
 /* footer */
 footer{
     background-color: #FFF;
@@ -222,7 +267,7 @@ footer{
 }
 .logoFooter img{
     width: auto;
-    height: 175px;
+    height: 450px;
 }
 .footerInfo{
     display: flex;
@@ -230,12 +275,13 @@ footer{
     gap: 20px; 
     padding: 10px;
     justify-content: center;
+    font-size: 30px;
 }
 .contact h3{
     text-align: center;
     color: black;
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 50px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -266,15 +312,15 @@ footer{
 
 
 .socialMedia-logo {
-    width: 24px; 
-    height: 24px;
+    width: 50px; 
+    height: 50px;
 }
 
 .info h3{
     text-align: center;
     color: #000;
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 50px;
     padding: 10px;
     border-radius: 10px;
 
@@ -315,31 +361,119 @@ footer{
     border-radius: 10px;
 }
 .QSJ p{
-    font-size: 22px;
+    font-size: 50px;
     color: #FFF;
     text-align: justify;
     line-height: 2.1;
     word-spacing: 2px;
     text-indent: 30px;
 }
+.QSJ h1{
+    font-size: 80px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+
+
+.Marché{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2F4156;
+    border-radius: 10px;
+}
+.Marché h2{
+    font-size: 50px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+.Marché p{
+    font-size: 25px;
+    color: #FFF;
+    text-align: justify;
+    line-height: 2.1;
+    word-spacing: 2px;
+    text-indent: 30px;
+}
+.Marché li{
+    font-size: 25px;
+    color: #FFF;
+    text-align: justify;
+    line-height: 2.1;
+    word-spacing: 2px;
+    text-indent: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+    
 blockquote{
     font-style: italic;
     border-left: 4px solid #007bff;
     padding-left: 10px;
-    color: #FFF;
+    color: #000;
     margin: 20px 0;
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
+    text-decoration: underline;
     
 }
 
-.TitleMain{
+.TitleMain H1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #FFF;
-    font-size: 40px;
+    font-size: 80px;
     text-align: center;
+    padding: 10px;
     text-decoration: underline;
 }
 
+.Social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: #2F4156;
+    border-radius: 10px;
+}
+.Social h2{
+    font-size: 50px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+.VideoActu{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.VideoActu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+}
 
 .RecettePImg{
     background-color: #2F4156;
@@ -370,4 +504,17 @@ blockquote{
     line-height: 2.1;
     word-spacing: 2px;
     text-indent: 30px;
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

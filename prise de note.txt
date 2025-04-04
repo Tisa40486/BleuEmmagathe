@@ -2,3 +2,17 @@ Style - regular
 Fonte - grotesk
 Fonte - century
 Fonte - calibri
+
+
+
+
+
+
+
+
+
+a faire pour le 5 avril 
+
+- augmenter la police.
+- le menu prenne toute la page.
+-  faire un QR code

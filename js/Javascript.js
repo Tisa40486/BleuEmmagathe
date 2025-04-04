@@ -23,6 +23,23 @@ function moveSlide(step) {
     index = (index + step + slides.length) % slides.length;
     carousel.style.transform = `translateX(${-index * 100}%)`;}
 function autoSlide() {
-    moveSlide(1);
+    moveSlide(1)
 }
 setInterval(autoSlide, 5000);
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    function checkVisibility() {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight * 0.9) {
+                el.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Vérifie au chargement
+});
