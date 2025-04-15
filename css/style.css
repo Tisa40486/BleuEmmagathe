@@ -2,63 +2,76 @@
 body {
     
     margin: 0;
-    color: #2e2b59;
-    background-image: url("../img/Tulip.jpg");
+    color: white;   
     background-size: cover;
     background-attachment: fixed;
-    font-family: Arial nova light, sans-serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 .background {
     height: max-content;
     width: auto;
 }
 header {
-    background-color: #FFF;
-    color: white;
+    background-color: #FFFF;
+    color: #007bff;
     padding: 10px 0;
     text-align: center;
 }
 .logo {
     display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-}
-.logo img, h1 {
-    color: #2F4156;
-    font-family: Verdana, Tahoma, sans-serif, sans-serif;
-    font-size: 30px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-}
-.logo h2 {
-    display: flex;
-    justify-content: center;
-    font-family: Verdana, Tahoma, sans-serif, sans-serif;
-    font-size: 30px;
-    color: #2F4156;
-    padding: 10px;
-   
-    
-}
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #2F4156;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: #0b4aa8;
-    padding: 10px;
-    
+    align-items: flex-end; 
+    gap: 10px;
 }
 
+.logo img {
+    height: 200px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    gap: 0px;
+}
+
+.logo-text h1,
+.logo-text h2 {
+    margin: 10px 0;
+    color: #2F4156;
+    line-height: 1.1;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.logo-text h1 {
+    font-size: 80px;
+
+}
+
+
+.logo-text p {
+    font-size: 30px;
+    color: #2F4156;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-direction: column; 
+    background-color: #FFF;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 20px; 
+    font-family: 'Cormorant Garamond', serif;
+    color: #007bff;
+}
 .navbar ul {
     list-style: none;
     padding: 0;
@@ -70,7 +83,7 @@ header {
 .navbar ul li {
     position: relative;
     font-size: 25px;
-    color: white;
+    color: #093880;
     text-align: center;
     transition: background-color 0.3s ease;
     border-radius: 5px;
@@ -80,7 +93,7 @@ header {
 
 .navbar ul li a {
     text-decoration: none;
-    color: white;
+    color: #093880;
     padding: 10px 15px;
     display: block;
 }
@@ -100,9 +113,9 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #0b4aa8;
+    background-color: #FFF;
     min-width: 150px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(F, F, F, 0.1);
     border-radius: 5px;
     overflow: hidden;
     opacity: 0;
@@ -114,13 +127,13 @@ header {
     width: 100%;
 }
 .dropdown-content li a {
-    color: #2e2b59;
+    color: #093880;
     padding: 10px;
     display: block;
 }
 .dropdown-content li a:hover {
-    background-color: #2F4156;
-    color: white;
+    background-color: white;
+    color: #093880;
     text-decoration: none;
 }
 .dropdown:hover .dropdown-content,
@@ -142,120 +155,32 @@ header {
     flex-direction: column;
     padding: 10px;
     margin: 10px;
-    background-color: #0b4aa8;
+    background-image: url("../img/BackgroundIndex.png");
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
+    font-size: 120px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    letter-spacing: 2px;
     
 }
-.Cyanotype h2{
+.Miaou{
+    color: black;
+}
+.Miaou h1{
     font-size: 80px;
-    color: #FFF;
-    text-align: center;
-    padding: 5px;
-    text-decoration: none;
-}
-.Cyanotype h3{
-    font-size: 50px;
-    color: #FFF;
-    text-align: center;
-    padding: 5px;
-    text-decoration: underline;
-}
-.Cyanotype p{
-    font-size: 25px;
-    color: #FFF;
-    text-align: center;
-    padding: 10px;
-}
-.Cyanotype a{
-    text-decoration: none;
-    color: #FFF;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #2F4156;
-    font-size: 30px;
-}
-
-.PieceUnique{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    margin: 10px;
-    background-color: transparent;
-    border-radius: 10px;
-}
-.PieceUnique h2{
-    font-size: 50px;
-    color: #FFF;
-    text-align: center;
-    padding: 10px;
-    text-decoration: underline;
-}  
-
-/* carousel image Piece Unique*/
-.carousel-container {
-    position: relative;
-    width: 100%; 
-    height: auto;
-    max-width: 400px; 
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     
-}
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-
-}
-.carousel img {
-    width: 100%;
-    height: auto;
-    flex: 0 0 100%;
-    border-radius: 10px;
-}
-/* Boutons de navigation */
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 5px 10px; 
-    font-size: 35px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s;
-}
-button.prev:hover, button.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-button.prev {
-    left: 5px;
-}
-button.next {
-    right: 5px;
-} 
-.Video{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    margin: 10px;
-    background-color: transparent;
-    border-radius: 10px;
-}
-.Video h2{
-    font-size: 30px;
-    color: #FFF;
     text-align: center;
     padding: 10px;
     text-decoration: underline;
+}
+.Miaou p{
+    font-size: 25px;
+    text-align: justify;
+    line-height: 2.1;
+    text-indent: 30px;
 }
 
 /* footer */
