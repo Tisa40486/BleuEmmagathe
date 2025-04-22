@@ -166,21 +166,30 @@ header {
     letter-spacing: 2px;
     
 }
-.Miaou{
+.textIndex{
     color: black;
 }
-.Miaou h1{
+.textIndex h1{
     font-size: 80px;
-    
     text-align: center;
     padding: 10px;
     text-decoration: underline;
 }
-.Miaou p{
-    font-size: 25px;
-    text-align: justify;
+.textIndex p{
+    font-size: 40px;
+    text-align: center;
     line-height: 2.1;
-    text-indent: 30px;
+    text-indent: 15px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.textIndex img{
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 /* footer */
@@ -189,10 +198,14 @@ footer{
     text-align: center;
     padding: 10px 0;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    
 }
 .logoFooter img{
     width: auto;
-    height: 450px;
+    height: 350px;
 }
 .footerInfo{
     display: flex;
@@ -310,37 +323,53 @@ footer{
     flex-direction: column;
     padding: 10px;
     margin: 10px;
-    background-color: #2F4156;
     border-radius: 10px;
 }
-.Marché h2{
+.Marché h1{
     font-size: 50px;
-    color: #FFF;
+    color: #000;
     text-align: center;
     padding: 10px;
-    text-decoration: underline;
+    text-decoration: none;
+    font-family: 'Patrick Hand', cursive;
 }
-.Marché p{
-    font-size: 25px;
-    color: #FFF;
-    text-align: justify;
-    line-height: 2.1;
-    word-spacing: 2px;
-    text-indent: 30px;
+.Marché h2{
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Patrick Hand', cursive;
 }
-.Marché li{
-    font-size: 25px;
-    color: #FFF;
-    text-align: justify;
-    line-height: 2.1;
-    word-spacing: 2px;
-    text-indent: 30px;
+
+.Marché ul{
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    background-color: lightgrey;
+}
+.Marché li h1{
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Marché li h2{
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Marché li h3{
+    font-size: 35px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
     
 blockquote{
@@ -355,16 +384,6 @@ blockquote{
     
 }
 
-.TitleMain H1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-    font-size: 80px;
-    text-align: center;
-    padding: 10px;
-    text-decoration: underline;
-}
 
 .Social{
     display: flex;
@@ -442,4 +461,99 @@ blockquote{
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.TitleMainGalerie {
+    
+    background-image: url(../img/dernièresPhotosSiteWeb/92691E76-E03C-43DC-99B4-322CB18E1BEE.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+   
+
+}
+.TitleMainGalerie   h1{
+    font-size: 80px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    
+}
+.Galerie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+  
+}
+
+.Galerie h1{
+    font-size: 50px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    color: #000;
+    font-family: 'Patrick Hand', cursive;   
+    font-weight: 300;
+
+}
+.Galerie p {
+    font-size: 25px;
+    color: #FFF;
+    text-align: justify;
+    line-height: 2.1;
+    color: #000;
+    font-weight: 300;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.Serie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Serie h1 {
+    font-size: 50px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    font-family: 'Patrick Hand', cursive;
+}
+.Serie ul {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    list-style: none;
+    gap: 2px;
+}
+
+.TitleMainActualites{
+    background-image: url(../img/Galerie1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 50px;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
 }
