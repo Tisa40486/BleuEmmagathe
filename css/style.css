@@ -4,16 +4,25 @@
 @font-face {
   font-family: 'Moontime';
   src: url('/font/FontsFree-Net-MoonTime-Regular-1.ttf') format('truetype');
+  font-weight: lighter;
+  color: #2e2b59;
 }
 
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/font/Quicksand[wght].ttf') format('truetype');
+  font-weight: lighter;
+  color: #2e2b59;
+}
 /* ============================
    RESET & GLOBAL
 ============================ */
 body {
   margin: 0;
   padding: 0;
-  color: #000;
   font-family: 'Moontime', sans-serif;
+    color: #2e2b59;
+    font-weight: lighter;
 }
 
 main {
@@ -24,16 +33,18 @@ main {
    NAVIGATION
 ============================ */
 .navbar {
-  width: 100%;
-  background-color: #fff;
-  padding: 20px 40px;
-  font-family: 'Cormorant Garamond', serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 2px solid #ccc;
-  box-sizing: border-box;
-  position: fixed;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 40px;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .navbar-top {
@@ -58,7 +69,8 @@ main {
   font-size: 130px;
   margin: 0;
   font-family: 'Moontime', sans-serif;
-  color: #000;
+  color: #2e2b59;
+  font-weight: lighter;
 }
 
 .navbar-bottom {
@@ -97,38 +109,36 @@ main {
 ============================ */
 
 .dropdown {
-  position: relative;
+    position: relative;
+    display: inline-block;
 }
+
 .dropdown-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: #FFF;
-  list-style: none;
-  min-width: 150px;
-  padding: 0;
-  margin: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  z-index: 999;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    background-color: #fff;
+    align-items: center;
+    text-align: center;
 }
 
-.dropdown-content li a {
-  padding: 10px;
-  color: #000;
-  display: block;
+
+
+.dropdown-content a {
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+    width: 100%; 
 }
 
-.dropdown-content li a:hover {
-  background-color: white;
-  color: #093880;
+.dropdown-content a:hover {
   text-decoration: overline underline;
 }
 
@@ -143,18 +153,18 @@ main {
 ============================ */
 .Title h1 {
   font-size: 120px;
-  color: #000;
-  font-family: 'Moontime', sans-serif;
+  font-family: 'Moontime';
   text-align: center;
 }
 
 .TextPara h1,
 .TextPara h2,
 .TextPara h3 {
-  color: #000;
-  font-family: 'Moontime', sans-serif;
-  text-align: center;
-margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #2e2b59;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
 }
 
 .TextPara h1 { font-size: 110px; }
@@ -162,16 +172,15 @@ margin: 0;
 .TextPara h3 { font-size: 75px; }
 
 .TextPara p {
-  font-size: 30px;
-  color: #000;
-  font-family: 'Cormorant Garamond', serif;
-  text-align: justify;
-
-  line-height: 1.6;
-  max-width: 1500px;   
-  margin: 0 auto;    
-  padding: 0 20px;    
-  text-align: justify; 
+    font-size: 30px;  
+    font-family: 'Quicksand', sans-serif;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 2.0;
+    max-width: 1500px;   
+    margin: 0 auto;    
+    padding: 0 20px;    
+    text-align: justify; 
 }
 
 .TextPara img {
@@ -182,7 +191,6 @@ margin: 0;
   margin: 20px auto;
   border-radius: 10px;
 }
-
 
 .QuiSuisJe {
   display: flex;
@@ -209,11 +217,11 @@ margin: 0;
 
 .text-container p {
   font-size: 30px;
-  color: #000;
-  font-family: 'Cormorant Garamond', serif;
-  text-align: center;
+  font-family: 'Quicksand', serif;
+  text-align: justify;
   line-height: 1.6;
   margin: 0;
+  text-indent: 20px;
 }
 
 .text-container2 p{
@@ -221,7 +229,7 @@ margin: 0;
   flex-direction: column;
   gap: 20px;
   max-width: 1500px;
-  text-align: center;
+  text-align: justify;
 }
 
 /* ============================
@@ -240,27 +248,40 @@ margin: 0;
 .bg-Index {
   background-image: url('/img/BackgroundIndex.png');
 }
-
+.bg-Index h1{
+  font-weight: lighter;
+}
 .bg-Galerie {
   background-image: url('/img/BackgroundGalerie.png');
+}
+.bg-Galerie h1{
+  font-weight: lighter;
 }
 
 .bg-Actualite {
   background-image: url('/img/fondActu.png');
 }
+.bg-Actualite h1 {
+  font-weight: lighter;
+}
 
 .bg-QSJ {
   background-image: url('/img/BackgroundQSJ.png');
 }
+.bg-QSJ h1 {
+  font-weight: lighter;
+}
 
 .title-section {
   padding: 80px 0;
-  margin-top: 80px;
   text-align: center;
   color: white;
   font-family: 'Moontime', sans-serif;
   font-size: 120px;
   border-radius: 25px;
+  font-weight: lighter;
+    margin-top: 120px;
+    
 }
 
 /* ============================
@@ -298,6 +319,7 @@ margin: 0;
   text-decoration: none;
   color: #000;
 }
+
 .Series a:hover {
   text-decoration: underline;
 }
@@ -323,11 +345,6 @@ margin: 0;
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
-}
-
 .card img {
   width: auto;
   height: auto;
@@ -350,6 +367,7 @@ margin: 0;
 /* ============================
    MARCHÉ SECTION
 ============================ */
+
 .marche-section {
   text-align: center;
   padding: 60px 20px;
@@ -359,12 +377,12 @@ margin: 0;
 .marche-section h1 {
   font-size: 75px;
   margin-bottom: 10px;
-  color: #003366;
+  color: #2e2b59;
 }
 
 .marche-section h2 {
-  font-size: 50px;
-  color: #555;
+  font-size: 75px;
+  color: #2e2b59;
   margin-bottom: 60px;
 }
 
@@ -384,12 +402,12 @@ margin: 0;
   padding: 25px;
   width: 900px;
   transition: transform 0.3s ease;
+  font-family: Quicksand, sans-serif;
 }
-
 
 .marche-card h3 {
   font-size: 70px;
-  color: #003366;
+  color: #2e2b59;
   margin-bottom: 10px;
 }
 
@@ -400,20 +418,28 @@ margin: 0;
 }
 
 .marche-card span {
-  font-weight: bold;
-  color: #0077aa;
+  color: #2e2b59;
   font-size: 50px;
 }
 
 /* ============================
    FOOTER
 ============================ */
-.footer {
-  background-color: #f8f9fa;
-  padding: 40px 20px 20px;
-  font-family: 'Moontime', sans-serif;
-  color: #000;
 
+.footer {
+    font-family: 'Moontime', sans-serif;
+    color: #2e2b59;
+    font-weight: lighter;
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;   
 }
 
 .footer-container {
@@ -433,8 +459,8 @@ margin: 0;
 
 .footer-section h2 {
   font-size: 60px;
-  color: #000;
-  border-bottom: 2px solid #000;
+  color: #2e2b59;
+  border-bottom: 2px solid #2e2b59;
   padding-bottom: 4px;
   margin-bottom: 10px;
   text-align: center;
@@ -476,7 +502,7 @@ margin: 0;
 
 .footer-logo h2 {
   font-size: 35px;
-  color: #000;
+  color: #2e2b59;
   font-family: 'Moontime', sans-serif;
   margin: 0;
 }
@@ -486,7 +512,7 @@ margin: 0;
   margin-top: 30px;
   font-size: 30px;
   color: #000;
- font-family: 'Cormorant Garamond', serif;
+ font-family: 'Quicksand', sans-serif;
 }
 
 .icon {
@@ -512,43 +538,6 @@ margin: 0;
     flex-direction: column;
     gap: 10px;
     margin-left: 0;
-  }
-
-  .logo img {
-    width: 100px;
-  }
-
-  .logo h1 {
-    font-size: 70px;
-  }
-
-  .navbar-bottom ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .navbar a {
-    font-size: 24px;
-  }
-
-  .title-section {
-    font-size: 60px;
-    padding: 40px 0;
-  }
-
-  
-  .navbar {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .navbar li,
-  .navbar a {
-    font-size: 24px;
-  }
-
-  .logo {
-    margin-left: 0;
     justify-content: center;
   }
 
@@ -561,31 +550,81 @@ margin: 0;
     text-align: center;
   }
 
+  .navbar-bottom ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar a,
+  .navbar li {
+    font-size: 24px;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .title-section {
+    font-size: 60px;
+    padding: 40px 0;
+  }
+
   .Title h1,
   .TextPara h1,
   .TextPara h2,
   .TextPara h3 {
     font-size: 48px;
+    font-weight: lighter;
+    text-align: center;
   }
 
   .TextPara p,
   .text-container p {
     font-size: 18px;
     padding: 0 10px;
+    text-align: justify;
   }
 
   .TextPara img,
   .QuiSuisJe img {
     width: 100%;
+    height: auto;
+  }
+
+  .QuiSuisJe {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .text-container {
+    padding: 10px;
+  }
+
+  .text-container2 p {
+    font-size: 18px;
+    padding: 0 10px;
+    text-align: justify;
   }
 
   .Series h2,
   .Series ul {
     font-size: 40px;
+    text-align: center;
+  }
+
+  .Series ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .card-content h2 {
     font-size: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 
   .marche-card {
@@ -629,7 +668,7 @@ margin: 0;
 
 /* Tablettes (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .logo h1 {
+  .logo h1 {
     font-size: 100px;
   }
 
@@ -654,7 +693,8 @@ margin: 0;
     font-size: 60px;
   }
 
-  .TextPara p {
+  .TextPara p,
+  .text-container p {
     font-size: 22px;
   }
 
@@ -664,6 +704,10 @@ margin: 0;
 
   .card-content h2 {
     font-size: 40px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .marche-card {
@@ -688,4 +732,3 @@ margin: 0;
     font-size: 20px;
   }
 }
-
